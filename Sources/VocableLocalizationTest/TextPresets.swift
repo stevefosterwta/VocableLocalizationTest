@@ -28,7 +28,7 @@ public struct PresetCategory: Codable {
 
 public struct PresetPhrase: Codable {
 
-    let id: String
+    public let id: String
     let categoryIds: [String]
     let localizedUtterance: [String: String]
 
