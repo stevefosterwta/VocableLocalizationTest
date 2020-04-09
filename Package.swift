@@ -1,4 +1,4 @@
-// swift-tools-version:5.2
+// swift-tools-version:5
 import PackageDescription
 
 let package = Package(
@@ -10,6 +10,6 @@ let package = Package(
         .library(name: "VocableLocalizationTest", targets: ["VocableLocalizationTest"]),
     ],
     targets: [
-        .target(name: "VocableLocalizationTest", path: "Presets", dependencies: [])
+        .target(name: "VocableLocalizationTest", dependencies: ["Presets"])
     ]
 )
