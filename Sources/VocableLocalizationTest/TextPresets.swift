@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import VocableLocalizationTest
 
 // Top level JSON object
 public struct PresetData: Codable {
