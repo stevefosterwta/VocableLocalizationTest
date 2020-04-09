@@ -10,6 +10,6 @@ let package = Package(
         .library(name: "VocableLocalizationTest", targets: ["VocableLocalizationTest"]),
     ],
     targets: [
-        .target(name: "VocableLocalizationTest", path "Presets", dependencies: [])
+        .target(name: "VocableLocalizationTest", path: "Presets", dependencies: [])
     ]
 )
