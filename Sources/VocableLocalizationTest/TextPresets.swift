@@ -20,7 +20,7 @@ public struct PresetData: Codable {
 
 public struct PresetCategory: Codable {
 
-    let id: String
+    public let id: String
     let localizedName: [String: String]
     let hidden: Bool
 
@@ -28,7 +28,7 @@ public struct PresetCategory: Codable {
 
 public struct PresetPhrase: Codable {
 
-    let id: String
+    public let id: String
     let categoryIds: [String]
     let localizedUtterance: [String: String]
 
@@ -36,7 +36,7 @@ public struct PresetPhrase: Codable {
 
 public struct TextPresets {
 
-//    public static let savedSayingsIdentifier = "preset_user_favorites"
+    public static let savedSayingsIdentifier = "preset_user_favorites"
 //    public static let numPadIdentifier = "preset_user_keypad"
 
     public static var presets: PresetData? {
