@@ -36,8 +36,8 @@ public struct PresetPhrase: Codable {
 
 public struct TextPresets {
 
-    static let savedSayingsIdentifier = "preset_user_favorites"
-    static let numPadIdentifier = "preset_user_keypad"
+    public static let savedSayingsIdentifier = "preset_user_favorites"
+    public static let numPadIdentifier = "preset_user_keypad"
 
     static var numPadPhrases: [PhraseViewModel] {
         var numbers = (1...9).map { PhraseViewModel(unpersistedPhrase: "\($0)")}
