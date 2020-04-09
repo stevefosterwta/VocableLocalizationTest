@@ -36,7 +36,6 @@ public struct PresetPhrase: Codable {
 public struct TextPresets {
 
     public static let savedSayingsIdentifier = "preset_user_favorites"
-//    public static let numPadIdentifier = "preset_user_keypad"
 
     public static var presets: PresetData? {
         if let json = dataFromBundle() {
@@ -52,7 +51,7 @@ public struct TextPresets {
 
     private static func dataFromBundle() -> Data? {
 
-        if let path = Bundle.main.path(forResource: "../textpresets", ofType: "json") {
+        if let path = Bundle.main.path(forResource: "textpresets", ofType: "json") {
             do {
                 return try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
             } catch {
