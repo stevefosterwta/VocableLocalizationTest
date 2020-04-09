@@ -6,7 +6,6 @@
 //  Copyright © 2020 WillowTree. All rights reserved.
 //
 
-
 import Foundation
 import VocableLocalizationTest
 
@@ -48,7 +47,7 @@ public struct TextPresets {
         return numbers + responses
     }
 
-    static var presets: PresetData? {
+    public static var presets: PresetData? {
         if let json = dataFromBundle() {
             do {
                 return try JSONDecoder().decode(PresetData.self, from: json)
