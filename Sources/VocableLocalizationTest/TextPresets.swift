@@ -22,7 +22,7 @@ public struct PresetCategory: Codable {
 
     public let id: String
     public let localizedName: [String: String]
-    let hidden: Bool
+    public let hidden: Bool
 
 }
 
