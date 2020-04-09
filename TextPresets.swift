@@ -11,7 +11,7 @@ import Foundation
 import VocableLocalizationTest
 
 // Top level JSON object
-struct PresetData: Codable {
+public struct PresetData: Codable {
 
     let schemaVersion: Int
     let categories: [PresetCategory]
@@ -63,8 +63,6 @@ public struct TextPresets {
     private static func dataFromBundle() -> Data? {
 
         if let path = Bundle.main.path(forResource: "textpresets", ofType: "json") {
-            print("PATH: \(path)")
-
             do {
                 return try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
             } catch {
