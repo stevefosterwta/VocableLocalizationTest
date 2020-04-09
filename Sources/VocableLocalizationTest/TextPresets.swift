@@ -52,7 +52,7 @@ public struct TextPresets {
 
     private static func dataFromBundle() -> Data? {
 
-        if let path = Bundle.main.path(forResource: "textpresets", ofType: "json") {
+        if let path = Bundle.main.path(forResource: "../textpresets", ofType: "json") {
             do {
                 return try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
             } catch {
@@ -61,6 +61,7 @@ public struct TextPresets {
             }
         }
 
+        assertionFailure("Missing data")
         return nil
     }
 
