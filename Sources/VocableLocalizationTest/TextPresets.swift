@@ -30,7 +30,7 @@ public struct PresetPhrase: Codable {
 
     public let id: String
     let categoryIds: [String]
-    let localizedUtterance: [String: String]
+    public let localizedUtterance: [String: String]
 
 }
 
