@@ -13,8 +13,8 @@ import VocableLocalizationTest
 public struct PresetData: Codable {
 
     let schemaVersion: Int
-    let categories: [PresetCategory]
-    let phrases: [PresetPhrase]
+    public let categories: [PresetCategory]
+    public let phrases: [PresetPhrase]
 
 }
 
@@ -28,7 +28,7 @@ public struct PresetCategory: Codable {
 
 public struct PresetPhrase: Codable {
 
-    public let id: String
+    let id: String
     let categoryIds: [String]
     let localizedUtterance: [String: String]
 
@@ -36,16 +36,8 @@ public struct PresetPhrase: Codable {
 
 public struct TextPresets {
 
-    public static let savedSayingsIdentifier = "preset_user_favorites"
-    public static let numPadIdentifier = "preset_user_keypad"
-
-//    static var numPadPhrases: [PhraseViewModel] {
-//        var numbers = (1...9).map { PhraseViewModel(unpersistedPhrase: "\($0)")}
-//        numbers.append(PhraseViewModel(unpersistedPhrase: "0"))
-//        let responses = [PhraseViewModel(unpersistedPhrase: NSLocalizedString("No", comment: "'No' num pad response")),
-//                         PhraseViewModel(unpersistedPhrase: NSLocalizedString("Yes", comment: "'Yes' num pad response"))]
-//        return numbers + responses
-//    }
+//    public static let savedSayingsIdentifier = "preset_user_favorites"
+//    public static let numPadIdentifier = "preset_user_keypad"
 
     public static var presets: PresetData? {
         if let json = dataFromBundle() {
